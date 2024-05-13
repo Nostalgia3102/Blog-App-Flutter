@@ -15,9 +15,16 @@ class AppTheme {
     appBarTheme: const AppBarTheme(
       backgroundColor: AppPalette.backgroundColor
     ),
+    chipTheme: const ChipThemeData(
+      color: MaterialStatePropertyAll(
+        AppPalette.backgroundColor,
+      ),
+      side: BorderSide.none
+    ),
     inputDecorationTheme: InputDecorationTheme(
       enabledBorder: _border(),
-      focusedBorder: _border(AppPalette.gradient2)
+      focusedBorder: _border(AppPalette.gradient2),
+      errorBorder: _border(AppPalette.errorColor)
     )
   );
 }
